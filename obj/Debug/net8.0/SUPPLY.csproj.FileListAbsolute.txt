@@ -28,3 +28,4 @@
 /Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/SUPPLY.pdb
 /Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/SUPPLY.genruntimeconfig.cache
 /Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/ref/SUPPLY.dll
+/Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/SUPPLY.sourcelink.json

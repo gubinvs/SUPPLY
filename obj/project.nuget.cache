@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "pO83jKh62Xe5Uj7rxA6wTFg3Z/1AObTRe/xG+Xd+A5K3F9F5mQQfciInmKj+R4z7WOV4eIoflv0qe8aBH3JTtw==",
+  "dgSpecHash": "iRHplN9TJtOz6ksbgrLyhyCuuN7WnJEL9d3JbroQWvw1B/nlyjsmIcTwdcjUPKuM58gU4eRNNZ6GIPqGTSvMbg==",
   "success": true,
   "projectFilePath": "/Users/vladimirgubin/web-developer/SUPPLY/SUPPLY.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/vladimirgubin/.nuget/packages/microsoft.office.interop.excel/15.0.4795.1001/microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -15,7 +15,7 @@ class ReadingFile {
     public string path = "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/component.xlsx";
 
     Workbook workbook = new Workbook();
-    
+
 }
 
 

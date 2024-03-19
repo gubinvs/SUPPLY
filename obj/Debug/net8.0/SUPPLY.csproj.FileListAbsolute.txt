@@ -29,3 +29,6 @@
 /Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/SUPPLY.genruntimeconfig.cache
 /Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/ref/SUPPLY.dll
 /Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/SUPPLY.sourcelink.json
+/Users/vladimirgubin/web-developer/SUPPLY/bin/Debug/net8.0/Microsoft.Office.Interop.Excel.dll
+/Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/SUPPLY.csproj.AssemblyReference.cache
+/Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/SUPPLY.csproj.CopyComplete

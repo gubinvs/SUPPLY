@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iSoDsggoPQa2fkA1zYnMSmxeQYV93eZC7FPkSrjgcDM=",
+  "Hash": "MFBFcsLDoTFFL2MfZJ2QSgA45VYW8UkfgM3/LGHiFCM=",
   "Source": "SUPPLY",
   "BasePath": "_content/SUPPLY",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/component.csv",
+      "SourceId": "SUPPLY",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/",
+      "BasePath": "_content/SUPPLY",
+      "RelativePath": "file/component.csv",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/file/component.csv"
     },
     {
       "Identity": "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/js/site.js",

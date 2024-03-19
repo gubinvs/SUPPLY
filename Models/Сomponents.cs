@@ -7,17 +7,11 @@ using SUPPLY;
 /// vendorСode - арикул
 /// nameComponent - наименование
 /// manufacturer - производитель
-class Components {
+public struct Components {
 
-    public string nameComponent;
-    public string vendorСode;
-    public string manufacturer;
-
-    public Components (string nameComponent, string vendorСode, string manufacturer ) 
-    {
-        this.nameComponent = nameComponent;
-        this.vendorСode = vendorСode;
-        this.manufacturer = manufacturer;
-    }
+    // public string nameComponent;
+    public string vendorСode {get; set; }
+    
+    // public string manufacturer;
 
 }

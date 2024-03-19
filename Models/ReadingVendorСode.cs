@@ -19,7 +19,8 @@ class ReadingVendorСode
     {
         // список артикулов наменклатуры
         Components vendor = new Components();
-    
+        Components vendor2 = new Components();
+
         // Откываем файл excel
         Excel.Application excelapp = new Excel.Application();
         excelapp.Workbooks.OpenText(path);
@@ -28,7 +29,7 @@ class ReadingVendorСode
         List<Components> list = new List<Components>()
         { 
             vendor,
-            
+            vendor2
         };
         
         

@@ -15,6 +15,22 @@ class ReadingExel
 {
     public Excel.Application excelapp = new Excel.Application();
 
+    public ReadingExel()
+    {    
+    }
+
+    public string OpenFileExcel(string path) 
+    {
+        excelapp.Visible = true;
+        excelapp.Workbooks.Open(path,
+         Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+         Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+         Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+         Type.Missing, Type.Missing);
+
+         return excelapp;
+    }
+
 }
 
 

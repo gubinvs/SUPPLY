@@ -1,13 +1,15 @@
 using System.Collections.Specialized;
 using SUPPLY;
 
-/// <summary>
-/// Структура описывающая параметры комплектующиего
-/// </summary>
-/// vendorСode - арикул
-/// nameComponent - наименование
-/// manufacturer - производитель
-public struct Components {
+
+namespace SUPPLY {
+    /// <summary>
+    /// Структура описывающая параметры комплектующиего
+    /// </summary>
+    /// vendorСode - арикул
+    /// nameComponent - наименование
+    /// manufacturer - производитель
+    public struct Components {
 
     private string nameComponent;
     private string vendorСode;
@@ -18,4 +20,5 @@ public struct Components {
         this.vendorСode = vendorСode;
     }
 
+    }   
 }

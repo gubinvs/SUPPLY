@@ -13,33 +13,39 @@ using Microsoft.Office.Interop.Excel;
 /// Вернуть результат чтения файла в виде List
 /// </summary>
 /// path - путь к файлу
-class ReadingVendorСode
-{
-    public List<Components> components = new List<Components>();
-    private Application? excelapp;
+/// 
 
-    public List<Components> ReturnListComponent()
+namespace SUPPLY {
+    class ReadingVendorСode
     {
+        public List<Components> components = new List<Components>();
+        private Application? excelapp;
 
-        // excelapp = new Excel.Application();
-        // excelapp.Visible = true;
-        // excelapp.Workbooks.Open(@"C:\a.html",
-        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-        //     Type.Missing, Type.Missing);
+        public List<Components> ReturnListComponent()
+        {
 
-        string nameComponent = "Наименование";
-        string vendorСode = "Артикул";
+            // excelapp = new Excel.Application();
+            // excelapp.Visible = true;
+            // excelapp.Workbooks.Open(@"C:\a.html",
+            //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+            //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+            //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+            //     Type.Missing, Type.Missing);
 
-        
-        components.Add(
-            new Components(nameComponent, vendorСode)
-        );
+            string nameComponent = "Наименование";
+            string vendorСode = "Артикул";
 
-        return components;
-        
+            
+            components.Add(
+                new Components(nameComponent, vendorСode)
+            );
+
+            return components;
+            
+        }
+
+
     }
 
-
 }
+

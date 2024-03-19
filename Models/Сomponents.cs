@@ -9,13 +9,12 @@ using SUPPLY;
 /// manufacturer - производитель
 public struct Components {
 
-    // public string nameComponent;
+    private string nameComponent;
     private string vendorСode;
-    
-    // public string manufacturer;
 
-    public Components (string vendorСode)
+    public Components (string nameComponent, string vendorСode)
     {
+        this.nameComponent = nameComponent;
         this.vendorСode = vendorСode;
     }
 

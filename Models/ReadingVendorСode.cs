@@ -15,17 +15,31 @@ using Microsoft.Office.Interop.Excel;
 /// path - путь к файлу
 class ReadingVendorСode
 {
-    public List<Components> list;
+    public List<Components> components = new List<Components>();
+    private Application? excelapp;
 
-
-
-
-    public ReadingVendorCode()
+    public List<Components> ReturnListComponent()
     {
 
+        // excelapp = new Excel.Application();
+        // excelapp.Visible = true;
+        // excelapp.Workbooks.Open(@"C:\a.html",
+        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+        //     Type.Missing, Type.Missing);
+
+        string nameComponent = "Наименование";
+        string vendorСode = "Артикул";
+
+        
+        components.Add(
+            new Components(nameComponent, vendorСode)
+        );
+
+        return components;
         
     }
 
+
 }
-
-

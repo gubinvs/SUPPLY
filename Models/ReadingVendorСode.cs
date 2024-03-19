@@ -15,25 +15,15 @@ using Microsoft.Office.Interop.Excel;
 /// path - путь к файлу
 class ReadingVendorСode
 {
-    static List<Components> ReadingVendorCode(string path)
+    public List<Components> list;
+
+
+
+
+    public ReadingVendorCode()
     {
-        // список артикулов наменклатуры
-        Components vendor = new Components();
-        Components vendor2 = new Components();
 
-        // Откываем файл excel
-        Excel.Application excelapp = new Excel.Application();
-        excelapp.Workbooks.OpenText(path);
-
-        // считываем данные полей файла
-        List<Components> list = new List<Components>()
-        { 
-            vendor,
-            vendor2
-        };
         
-        
-        return list;
     }
 
 }

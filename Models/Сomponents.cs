@@ -10,8 +10,13 @@ using SUPPLY;
 public struct Components {
 
     // public string nameComponent;
-    public string vendorСode {get; set; }
+    private string vendorСode;
     
     // public string manufacturer;
+
+    public Components (string vendorСode)
+    {
+        this.vendorСode = vendorСode;
+    }
 
 }

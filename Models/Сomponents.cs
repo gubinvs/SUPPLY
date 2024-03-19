@@ -1,3 +1,4 @@
+using System.Collections.Specialized;
 using SUPPLY;
 
 /// <summary>
@@ -6,12 +7,17 @@ using SUPPLY;
 /// vendorСode - арикул
 /// nameComponent - наименование
 /// manufacturer - производитель
-struct Components {
-
-    public string vendorСode;
+class Components {
 
     public string nameComponent;
-
+    public string vendorСode;
     public string manufacturer;
+
+    public Components (string nameComponent, string vendorСode, string manufacturer ) 
+    {
+        this.nameComponent = nameComponent;
+        this.vendorСode = vendorСode;
+        this.manufacturer = manufacturer;
+    }
 
 }

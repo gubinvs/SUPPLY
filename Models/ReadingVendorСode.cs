@@ -6,6 +6,9 @@ using Excel = Microsoft.Office.Interop.Excel;
 using SUPPLY;
 using Microsoft.Office.Interop.Excel;
 using SUPPLY.Models;
+namespace SUPPLY.Models;
+
+
 
 /// <summary>
 /// Задачей данного класса является:
@@ -16,37 +19,34 @@ using SUPPLY.Models;
 /// path - путь к файлу
 /// 
 
-namespace SUPPLY {
-    class ReadingVendorСode
+class ReadingVendorСode
+{
+    public List<Components> components = new List<Components>();
+    private Application? excelapp;
+
+    public List<Components> ReturnListComponent()
     {
-        public List<Components> components = new List<Components>();
-        private Application? excelapp;
 
-        public List<Components> ReturnListComponent()
-        {
+        // excelapp = new Excel.Application();
+        // excelapp.Visible = true;
+        // excelapp.Workbooks.Open(@"C:\a.html",
+        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
+        //     Type.Missing, Type.Missing);
 
-            // excelapp = new Excel.Application();
-            // excelapp.Visible = true;
-            // excelapp.Workbooks.Open(@"C:\a.html",
-            //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-            //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-            //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-            //     Type.Missing, Type.Missing);
+        string nameComponent = "Наименование";
+        string vendorСode = "Артикул";
 
-            string nameComponent = "Наименование";
-            string vendorСode = "Артикул";
+        
+        components.Add(
+            new Components(nameComponent, vendorСode)
+        );
 
-            
-            components.Add(
-                new Components(nameComponent, vendorСode)
-            );
-
-            return components;
-            
-        }
-
-
+        return components;
+        
     }
+
 
 }
 

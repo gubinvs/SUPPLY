@@ -3,13 +3,16 @@
 
 @{
     ViewData["Title"] = "Спецификация на проект:";
-
 }
 <h1>@ViewData["Title"] </h1>
 
 <p>Вы загрузили данные для спецификации</p>
 
-
+@{
+    Components component = new Components("Панель оператора", "sas");
+    <h1>@component.nameComponent</h1>
+    <h3>@component.vendorСode</h3>
+}
 
 
 

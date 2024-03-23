@@ -11,14 +11,14 @@ namespace SUPPLY.Models {
     /// manufacturer - производитель
     public class Components {
 
-    public string nameComponent;
-    public string vendorСode;
+        public string nameComponent;
+        public string vendorСode;
 
-    public Components (string nameComponent, string vendorСode)
-    {
-        this.nameComponent = nameComponent;
-        this.vendorСode = vendorСode;
-    }
+        public Components (string nameComponent, string vendorСode)
+        {
+            this.nameComponent = nameComponent;
+            this.vendorСode = vendorСode;
+        }
 
     }   
 }

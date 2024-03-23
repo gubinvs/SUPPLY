@@ -1,5 +1,8 @@
-﻿@using SUPPLY.Models
+﻿@using Microsoft.AspNetCore.Mvc
+@using System.Collections.Generic
+@using SUPPLY.Models
 @model IEnumerable<Components>
+
 
 @{
     ViewData["Title"] = "Спецификация на проект:";
@@ -12,7 +15,26 @@
     Components component = new Components("Панель оператора", "sas");
     <h1>@component.nameComponent</h1>
     <h3>@component.vendorСode</h3>
+
+    List<Components> list = new List<Components>()
+    {
+        new Components("Первый элемент_1", "Значение_1"),
+        new Components("Первый элемент_2", "Значение_2"),
+        new Components("Первый элемент_3", "Значение_3")
+    };
+
+    @foreach (var e in @list) 
+    {
+        <div>@e.nameComponent</div>
+        <div>@e.vendorСode</div>
+
+    }   
 }
+
+
+
+
+
 
 
 

@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using Excel = Microsoft.Office.Interop.Excel;
 using SUPPLY;
 using Microsoft.Office.Interop.Excel;
+using SUPPLY.Models;
 
 /// <summary>
 /// Задачей данного класса является:

@@ -9,9 +9,12 @@
 <h1>Данные для создания спецификации:</h1>
 
 @{
+    // Создана переменная списока с компонентами
     List<Components> list = new List<Components>();
+    // Заполнен список компонентов полученными данными, через класс ListComponent()
     list.AddRange(new ListComponent().ComponentReturn());
-    
+
+    // Вывод списка компонентов на страницу браузера
     @foreach (var e in @list) 
     {
         <div>@e.nameComponent</div>

@@ -3,32 +3,15 @@
 @using SUPPLY.Models
 @model IEnumerable<Components>
 
-
 @{
     ViewData["Title"] = "Спецификация на проект:";
 }
-<h1>@ViewData["Title"] </h1>
-
-<p>Вы загрузили данные для спецификации</p>
+<h1>Данные для создания спецификации:</h1>
 
 @{
-    
-    Components component = new Components("Панель оператора", "sas");
-    <h1>@component.nameComponent</h1>
-    <h3>@component.vendorСode</h3>
-
-    @* List<Components> list = new List<Components>()
-    {
-        new Components("Первый элемент_1", "Значение_1"),
-        new Components("Первый элемент_2", "Значение_2"),
-        new Components("Первый элемент_3", "Значение_3")
-    }; *@
-
     List<Components> list = new List<Components>();
-    list.Add(new Components("sd", "sdf"));
     list.AddRange(new ListComponent().ComponentReturn());
     
-
     @foreach (var e in @list) 
     {
         <div>@e.nameComponent</div>

@@ -5,6 +5,8 @@
 @using Microsoft.Office.Interop.Excel;
 @using Excel = Microsoft.Office.Interop.Excel;
 @using SUPPLY;
+@using System.IO;
+@using ClosedXML.Excel;
 
 
 @{
@@ -24,7 +26,16 @@
 
   string path = "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/component.xlsx";
         
-  Excel.Application excelapp = new Excel.Application();
-  var wb = excelapp.Workbooks.Open(path);
+  var workbook = new XLWorkbook(path);
+  var worksheet = workbook.Worksheet(1);
+  var rows = worksheet.RangeUsed().RowsUsed(); // Skip header row
+  // пример чтения строк файла.
+  foreach (var row in rows)
+  {
+    <div>@row.Cell(1).Value</div>
+    <div>@row.Cell(2).Value</div>
+    <div>@row.Cell(3).Value</div>
 
+  }
+  
 }

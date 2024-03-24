@@ -32,3 +32,10 @@
 /Users/vladimirgubin/web-developer/SUPPLY/bin/Debug/net8.0/Microsoft.Office.Interop.Excel.dll
 /Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/SUPPLY.csproj.AssemblyReference.cache
 /Users/vladimirgubin/web-developer/SUPPLY/obj/Debug/net8.0/SUPPLY.csproj.CopyComplete
+/Users/vladimirgubin/web-developer/SUPPLY/bin/Debug/net8.0/ClosedXML.dll
+/Users/vladimirgubin/web-developer/SUPPLY/bin/Debug/net8.0/DocumentFormat.OpenXml.dll
+/Users/vladimirgubin/web-developer/SUPPLY/bin/Debug/net8.0/ExcelNumberFormat.dll
+/Users/vladimirgubin/web-developer/SUPPLY/bin/Debug/net8.0/Irony.dll
+/Users/vladimirgubin/web-developer/SUPPLY/bin/Debug/net8.0/SixLabors.Fonts.dll
+/Users/vladimirgubin/web-developer/SUPPLY/bin/Debug/net8.0/System.IO.Packaging.dll
+/Users/vladimirgubin/web-developer/SUPPLY/bin/Debug/net8.0/XLParser.dll

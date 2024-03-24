@@ -50,12 +50,3 @@
     <button class="btn btn-outline-secondary" type="button">Создать спецификацию</button>
     </div>
 </form>
-@{
-   string path = "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/component.xlsx";
-         
-    excelapp = new Excel.Application();
-    excelapp.Visible = true;
-    excelapp.Workbooks.Open(path);
-}
-
-<div>@excelapp.</div>

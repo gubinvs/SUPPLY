@@ -26,6 +26,7 @@
 
     List<Components> list = new List<Components>();
     list.Add(new Components("sd", "sdf"));
+    list.AddRange(new ListComponent().ComponentReturn());
     
 
     @foreach (var e in @list) 

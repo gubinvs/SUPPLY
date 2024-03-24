@@ -15,9 +15,9 @@ public class ListComponent {
 
     List<Components> list = new List<Components>()
     {
-        new Components("Первый элемент_1", "Значение элемента_1"),
-        new Components("Первый элемент_2", "Значение элемента_2"),
-        new Components("Первый элемент_3", "Значение элемента_3")
+        new Components("Первый элемент_1", "Значение_1", 1),
+        new Components("Первый элемент_2", "Значение_2", 2),
+        new Components("Первый элемент_3", "Значение_3", 3)
     };
 
     public List<Components> ComponentReturn() {

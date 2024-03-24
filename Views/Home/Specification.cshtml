@@ -6,28 +6,47 @@
 @{
     ViewData["Title"] = "Спецификация на проект:";
 }
-<h1>Данные для создания спецификации:</h1>
+<h2>Данные для создания спецификации:</h2>
+<form>
+    <div class="input-group mb-20">
+    <input type="text" class="form-control" placeholder="Идентификатор спецификации" aria-label="number" aria-describedby="basic-addon1">
+    </div>
 
-@{
-    // Создана переменная списока с компонентами
-    List<Components> list = new List<Components>();
-    // Заполнен список компонентов полученными данными, через класс ListComponent()
-    list.AddRange(new ListComponent().ComponentReturn());
+    <!--Заголовок таблицы выдачи информации-->
+    <table class="table">
+    <thead>
+        <tr>
+        <th scope="col">№ п\п</th>
+        <th scope="col">Наименование компонента</th>
+        <th scope="col">Артикул</th>
+        <th scope="col">Кол-во</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            // Создана переменная списока с компонентами
+            List<Components> list = new List<Components>();
+            // Заполнен список компонентов полученными данными, через класс ListComponent()
+            list.AddRange(new ListComponent().ComponentReturn());
+            
+            int count = 1; // счетчик количества строк в таблице
+            // Вывод списка компонентов на страницу браузера
+            @foreach (var e in @list) 
+            {
+                <tr>
+                    <th>@count</th>
+                    <td>@e.nameComponent</td>
+                    <td>@e.vendorСode</td>
+                    <td>@e.quantity</td>
+                </tr>
+                count++; // увеличивается счетчик на один
+            };
+        }
 
-    // Вывод списка компонентов на страницу браузера
-    @foreach (var e in @list) 
-    {
-        <div>@e.nameComponent</div>
-        <div>@e.vendorСode</div>
+    </tbody>
+    </table>
 
-    };
-}
-
-
-
-
-
-
-
-
-
+    <div class="d-grid gap-2">
+    <button class="btn btn-outline-secondary" type="button">Создать спецификацию</button>
+    </div>
+</form>

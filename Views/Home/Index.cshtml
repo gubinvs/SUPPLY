@@ -21,11 +21,10 @@
 <a href="Home/Specification">Открыть спецификацию</a>
 
 @{
-  
+
   string path = "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/component.xlsx";
         
   Excel.Application excelapp = new Excel.Application();
-  excelapp.Visible = true;
-  excelapp.Workbooks.Open(path);
+  var wb = excelapp.Workbooks.Open(path);
 
 }

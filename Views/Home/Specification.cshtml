@@ -17,19 +17,23 @@
     <h1>@component.nameComponent</h1>
     <h3>@component.vendorСode</h3>
 
-    List<Components> list = new List<Components>()
+    @* List<Components> list = new List<Components>()
     {
         new Components("Первый элемент_1", "Значение_1"),
         new Components("Первый элемент_2", "Значение_2"),
         new Components("Первый элемент_3", "Значение_3")
-    };
+    }; *@
+
+    List<Components> list = new List<Components>();
+    list.Add(new Components("sd", "sdf"));
+    
 
     @foreach (var e in @list) 
     {
         <div>@e.nameComponent</div>
         <div>@e.vendorСode</div>
 
-    }   
+    };
 }
 
 

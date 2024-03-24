@@ -21,30 +21,27 @@ namespace SUPPLY.Models;
 
 class ReadingVendorСode
 {
-    public List<Components> components = new List<Components>();
+
     private Application? excelapp;
 
-    public List<Components> ReturnListComponent()
+    string path = "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/component.xlsx";
+
+
+
+    public List<ListComponent> ReturnListComponent()
     {
-
-        // excelapp = new Excel.Application();
-        // excelapp.Visible = true;
-        // excelapp.Workbooks.Open(@"C:\a.html",
-        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-        //     Type.Missing, Type.Missing, Type.Missing, Type.Missing,
-        //     Type.Missing, Type.Missing);
-
-        string nameComponent = "Наименование";
-        string vendorСode = "Артикул";
-
+         
+        excelapp = new Excel.Application();
+        excelapp.Visible = true;
+        excelapp.Workbooks.Open(path);
         
-        components.Add(
-            new Components(nameComponent, vendorСode)
-        );
 
-        return components;
+
+        List<ListComponent> component = new List<ListComponent>();
         
+        
+        return component;
+         
     }
 
 

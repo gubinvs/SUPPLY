@@ -1,6 +1,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SUPPLY.Models;
+using System.IO;
+using ClosedXML.Excel;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 namespace SUPPLY.Controllers;
 
@@ -14,13 +17,12 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
-    {
-
+    {              
         return View();
     }
 
     public IActionResult Specification()
-    {
+    { 
         return View();
     }
 

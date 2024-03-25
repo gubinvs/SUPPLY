@@ -1,7 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Mvc
 @using System.Collections.Generic
 @using SUPPLY.Models
-@model IEnumerable<Components>
 @using Microsoft.Office.Interop.Excel;
 @using Excel = Microsoft.Office.Interop.Excel;
 @using SUPPLY;
@@ -9,10 +8,11 @@
 @using ClosedXML.Excel;
 
 
+
+
 @{
     ViewData["Title"] = "Home Page";
 }
-
 
 <div class="mb-3">
   <label for="formFile" class="form-label">Загрузите файл спецификации</label>
@@ -28,27 +28,18 @@
         
   var workbook = new XLWorkbook(path);  // Открыли книгу Excel
   var worksheet = workbook.Worksheet(1); // Выбрали Лист_1 книги Excel
-  var count = worksheet.RowCount();
-  var rows = worksheet.RangeUsed().RowsUsed(); // Получаем все строки в файле
+  var rows = worksheet.RangeUsed().RowsUsed(); // Получаем все заполненные строки в файле
+  var count = worksheet.RangeUsed().RowCount(); // Получаем количество заполненных строк
   var row2 = worksheet.Row(2); // Получаем указанную строку
   var renge = worksheet.Rows(2, count);
   // пример чтения строк файла.
-  @* foreach (var row in rows)
-  {
-    <div>@row.Cell(1).Value</div>
-    <div>@row.Cell(2).Value</div>
-    <div>@row.Cell(3).Value</div>
 
-  } *@
-
-
-  foreach (var row in renge)
+  
+  foreach (var row in @renge)
   {
     <div>@row.Cell(1).Value</div>
     <div>@row.Cell(2).Value</div>
     <div>@row.Cell(3).Value</div>
 
   }
-<p> GJHGJHG @count</p>
-  
 }

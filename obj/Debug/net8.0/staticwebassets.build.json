@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "U8AQiFCop18vAvylT2TrLG5GFcM4aEbjUt2mDf5Baxg=",
+  "Hash": "gfYDmcGg6D38XOztuFh1vWZcwcEREv/XZNaPQZkyIt0=",
   "Source": "SUPPLY",
   "BasePath": "_content/SUPPLY",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/~$component.xlsx",
+      "SourceId": "SUPPLY",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/",
+      "BasePath": "_content/SUPPLY",
+      "RelativePath": "file/~$component.xlsx",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/file/~$component.xlsx"
     },
     {
       "Identity": "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/component.xlsx",

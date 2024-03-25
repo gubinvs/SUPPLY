@@ -24,10 +24,13 @@
     </thead>
     <tbody>
         @{
-            // Создана переменная списока с компонентами
+            @* // Создана переменная списока с компонентами
             List<Components> list = new List<Components>();
             // Заполнен список компонентов полученными данными, через класс ListComponent()
-            list.AddRange(new ListComponent().ComponentReturn());
+            list.AddRange(new ListComponent().ComponentReturn()); *@
+
+            ReadingComponentExcel excelFile = new ReadingComponentExcel();
+            List<Components> list = excelFile.ListReturn(); // Получили коллекцию данных из файла excel
             
             int count = 1; // счетчик количества строк в таблице
             // Вывод списка компонентов на страницу браузера

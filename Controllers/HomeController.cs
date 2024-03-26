@@ -35,9 +35,9 @@ public class HomeController : Controller
         string path = "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/";
         //string path = $"{Directory.GetCurrentDirectory()}/wwwroot/file"; // Directory.GetCurrentDirectory() метод определяет текущую директорию
         // сохраняем файл в папку Files в каталоге wwwroot
-        using (var fileStream = new FileStream(path, FileMode.Create))
+        using (FileStream fileStream = new FileStream(path, FileMode.Create))
         {
-            uploadedFile.CopyToAsync(fileStream);
+            
         }
 
         return View("Index");

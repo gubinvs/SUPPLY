@@ -34,21 +34,21 @@ class ReadingComponentExcel
         var range = worksheet.Rows(2, count); // Получаем диапазон строк от второй до последней заполненной
 
         List<Components> components = new List<Components>();
-        int i; // числовая переменная для третьего аргумента в списке
+        int number; // числовая переменная для третьего аргумента в списке
         foreach (var row in @range)
         {   
             try // Проверка на ошибку преобразования в int
                 {
-                    i = Int32.Parse(row.Cell(3).Value.ToString()); // Преобразовали в строку, потом в число
+                    number = Int32.Parse(row.Cell(3).Value.ToString()); // Преобразовали в строку, потом в число
                 }
                 catch (FormatException)
                 {
-                    i = -1;
+                number = -1;
                 }
             components.Add(new Components(
                 row.Cell(1).Value.ToString(), // Преобразовали в строку
                 row.Cell(2).Value.ToString(), // Преобразовали в строку
-                i // Преобразованное число или -1 если ошибка
+                number // Преобразованное число или -1 если ошибка
                 ));
         };
         return components;

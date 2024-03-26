@@ -26,6 +26,24 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpPost]
+    public IActionResult Formfile(IFormFile uploadedFile)
+    {
+
+        // IFormFileCollection files = request.Form.Files;
+        // путь к папке Files
+        string path = "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/";
+        //string path = $"{Directory.GetCurrentDirectory()}/wwwroot/file"; // Directory.GetCurrentDirectory() метод определяет текущую директорию
+        // сохраняем файл в папку Files в каталоге wwwroot
+        using (var fileStream = new FileStream(path, FileMode.Create))
+        {
+            uploadedFile.CopyToAsync(fileStream);
+        }
+
+        return View("Index");
+    }
+
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

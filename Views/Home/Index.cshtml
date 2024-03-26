@@ -14,11 +14,12 @@
     ViewData["Title"] = "Home Page";
 }
 
-<form class="mb-3">
+<form class="mb-3" action="Home/Formfile" method="post" enctype="multipart/form-data">
   <label for="formFile" class="form-label">Загрузите файл спецификации</label>
-  <input class="form-control" type="file" id="formFile">
-  <button class="btn btn-outline-secondary" type="button">Загрузить файл спецификации</button>
+  <input class="form-control" type="file" id="formfile">
+  <button class="btn btn-outline-secondary" type="submit">Загрузить файл спецификации</button>
 </form>
 
 
 <a href="Home/Specification">Открыть спецификацию</a>
+<a href="Home/Formfile">@Directory.GetCurrentDirectory()</a>

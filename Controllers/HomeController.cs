@@ -40,7 +40,7 @@ public class HomeController : Controller
         if (uploadedFile != null)
         {
             // путь к папке Files
-            string path = $"{Directory.GetCurrentDirectory()}/wwwroot/file/" + uploadedFile.FileName; // Directory.GetCurrentDirectory() метод определяет текущую директорию
+            string path = $"{Directory.GetCurrentDirectory()}/wwwroot/file/component.xlsx";// + uploadedFile.FileName; // Directory.GetCurrentDirectory() метод определяет текущую директорию
             // сохраняем файл в папку Files в каталоге wwwroot
             using (var fileStream = new FileStream(path, FileMode.Create))
             {

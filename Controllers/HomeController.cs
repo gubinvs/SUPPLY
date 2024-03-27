@@ -1,9 +1,16 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SUPPLY.Models;
+using System.Linq;
+using System.Threading.Tasks;
 using System.IO;
 using ClosedXML.Excel;
 using DocumentFormat.OpenXml.Wordprocessing;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace SUPPLY.Controllers;
 
@@ -25,24 +32,24 @@ public class HomeController : Controller
     { 
         return View();
     }
+    
 
     [HttpPost]
-    public IActionResult Formfile(IFormFile uploadedFile)
+    public async Task<IActionResult> AddFileServer(IFormFile uploadedFile)
     {
+        // if (uploadedFile != null)
+        // {
+            // путь к папке Files
+            string path = $"{Directory.GetCurrentDirectory()}/wwwroot/file/" + uploadedFile.FileName; // Directory.GetCurrentDirectory() метод определяет текущую директорию
+            // сохраняем файл в папку Files в каталоге wwwroot
+            using (var fileStream = new FileStream(path, FileMode.Create))
+            {
+                await uploadedFile.CopyToAsync(fileStream);
+            }
+        // }
 
-        // IFormFileCollection files = request.Form.Files;
-        // путь к папке Files
-        string path = "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/";
-        //string path = $"{Directory.GetCurrentDirectory()}/wwwroot/file"; // Directory.GetCurrentDirectory() метод определяет текущую директорию
-        // сохраняем файл в папку Files в каталоге wwwroot
-        using (FileStream fileStream = new FileStream(path, FileMode.Create))
-        {
-            
-        }
-
-        return View("Index");
+        return RedirectToAction("Specification");
     }
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

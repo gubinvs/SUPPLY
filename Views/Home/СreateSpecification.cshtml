@@ -1,0 +1,50 @@
+@using Microsoft.AspNetCore.Mvc
+@using SUPPLY.Models
+@using SUPPLY
+@model List<Components>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+
+ <!--Заголовок таблицы выдачи информации-->
+    <table class="table">
+    <thead>
+        <tr>
+        <th scope="col">№ п\п</th>
+        <th scope="col">Наименование компонента</th>
+        <th scope="col">Артикул</th>
+        <th scope="col">Кол-во</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            ReadingComponentExcel excelFile = new ReadingComponentExcel();
+            List<Components> list = excelFile.ListReturn(); // Получили коллекцию данных из файла excel
+
+            int count = 1; // счетчик количества строк в таблице Excel
+            // Вывод списка компонентов на страницу браузера
+            @foreach (var e in @list) 
+            {
+                <tr>
+                    <th>@count</th>
+                    <td>@e.nameComponent</td>
+                    <td>@e.vendorСode</td>
+                    <td>@e.quantity</td>
+                </tr>
+
+                count++; // увеличивается счетчик на один
+            };
+
+            // Сериализация данных в Json для сохранения на диске и последующей работы с данной спецификации
+            // Json файл отправляется в контроллер, где и происходит сохранение на диске. 
+            // Далее пользователь перенаправляется на страницу, где уже можно работать с информацией взятой из этого файла
+
+
+        }
+
+    </tbody>
+    </table>
+
+

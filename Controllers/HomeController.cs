@@ -53,13 +53,13 @@ public class HomeController : Controller
 
     // Сериализация загруженной из Excel файла спецификация
     [HttpPost]
-    // public async Task<IActionResult> СreateSpecification(List<Components> list)
-    // {
-    //     List<Components> newlist = list;
+    public async Task<IActionResult> СreateSpecification(List<Components> list)
+    {
+        List<Components> newList = list;
 
-    //     return View("NewSpecification");
+        return View(newList);
 
-    // }
+    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

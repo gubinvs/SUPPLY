@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/file/component.xlsx",
+      "PackagePath": "staticwebassets/file/component.xlsx"
+    },
+    {
       "Id": "/Users/vladimirgubin/web-developer/SUPPLY/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

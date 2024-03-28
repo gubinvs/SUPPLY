@@ -7,9 +7,11 @@
     ViewData["Title"] = "Спецификация на проект:";
 }
 <h2>Данные для создания спецификации:</h2>
-<form>
+
+<form action="СreateSpecification" method="post" enctype="multipart/form-data">
     <div class="input-group mb-20">
-    <input type="text" class="form-control" placeholder="Идентификатор спецификации" aria-label="number" aria-describedby="basic-addon1">
+        <!--Введенное пользователем наименование спецификации-->
+        <input type="text" class="form-control" placeholder="Идентификатор спецификации" aria-label="number" aria-describedby="basic-addon1" name="numberSpecification">
     </div>
 
     <!--Заголовок таблицы выдачи информации-->
@@ -50,6 +52,6 @@
     </table>
 
     <div class="d-grid gap-2">
-    <button class="btn btn-outline-secondary" type="button">Создать спецификацию</button>
+        <button class="btn btn-outline-secondary" type="submit">Создать спецификацию</button>
     </div>
 </form>

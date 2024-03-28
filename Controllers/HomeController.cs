@@ -56,6 +56,15 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    // Сериализация загруженной из Excel файла спецификация
+    [HttpPost]
+    public async Task<IActionResult> СreateSpecification(List<Components> list)
+    {
+
+        return View("a");
+
+    }
 }
 
 

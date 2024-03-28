@@ -1,7 +1,9 @@
 ﻿@using Microsoft.AspNetCore.Mvc
 @using System.Collections.Generic
 @using SUPPLY.Models
+@using System.Text.Json
 @model IEnumerable<Components>
+
 
 @{
     ViewData["Title"] = "Спецификация на проект:";
@@ -11,7 +13,7 @@
 <form action="СreateSpecification" method="post" enctype="multipart/form-data">
     <div class="input-group mb-20">
         <!--Введенное пользователем наименование спецификации-->
-        <input type="text" class="form-control" placeholder="Идентификатор спецификации" aria-label="number" aria-describedby="basic-addon1" name="numberSpecification">
+        <input type="text" class="form-control" placeholder="Идентификатор спецификации" aria-label="number" aria-describedby="basic-addon1" name="numberSpecification" required>
     </div>
 
     <!--Заголовок таблицы выдачи информации-->
@@ -26,10 +28,11 @@
     </thead>
     <tbody>
         @{
+            // Объект класса, который обрабатывает загруженный через форму файл Excel
             ReadingComponentExcel excelFile = new ReadingComponentExcel();
             List<Components> list = excelFile.ListReturn(); // Получили коллекцию данных из файла excel
-            
-            int count = 1; // счетчик количества строк в таблице
+
+            int count = 1; // счетчик количества строк в таблице Excel
             // Вывод списка компонентов на страницу браузера
             @foreach (var e in @list) 
             {
@@ -39,8 +42,15 @@
                     <td>@e.vendorСode</td>
                     <td>@e.quantity</td>
                 </tr>
+
                 count++; // увеличивается счетчик на один
             };
+
+            // Сериализация данных в Json для сохранения на диске и последующей работы с данной спецификации
+            // Json файл отправляется в контроллер, где и происходит сохранение на диске. 
+            // Далее пользователь перенаправляется на страницу, где уже можно работать с информацией взятой из этого файла
+
+
         }
 
     </tbody>

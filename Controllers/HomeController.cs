@@ -33,7 +33,6 @@ public class HomeController : Controller
         return View();
     }
     
-
     [HttpPost]
     public async Task<IActionResult> AddFileServer(IFormFile uploadedFile)
     {
@@ -51,12 +50,6 @@ public class HomeController : Controller
         return RedirectToAction("Specification");
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
-
     // Сериализация загруженной из Excel файла спецификация
     [HttpPost]
     public async Task<IActionResult> СreateSpecification(List<Components> list)
@@ -65,6 +58,14 @@ public class HomeController : Controller
         return View();
 
     }
+    
+    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    public IActionResult Error()
+    {
+        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+
+
 }
 
 

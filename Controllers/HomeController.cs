@@ -62,7 +62,7 @@ public class HomeController : Controller
     public async Task<IActionResult> СreateSpecification(List<Components> list)
     {
 
-        return View("a");
+        return View();
 
     }
 }
